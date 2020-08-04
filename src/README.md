@@ -29,10 +29,12 @@ Snack has methods (so can)
 * [x] get id
 * [x] set and [x] get name
 * [x] set and [x] get cost
-* {x} set and [x] get vending machine id
-* [x] get quantity
-* [+] add quantity when given how many to add (setQty)
-* buy snack when given how many to buy
+* [x] set and [x] get vending machine id
+* [x] get quantity [x]set quantity
+  // These go in the main because they are arithmatic
+* [] add quantity when given how many to add
+* []buy snack when given how many to buy
+// stretch
 * get total cost given a quantity
 
 ### VendingMachines
@@ -61,8 +63,10 @@ Customer has methods (so can)
 
 * get id
 * set and get name
+  // on main
 * add cash to cash on hand
 * get cash on hand
+// on main/stretch?
 * buy snacks. Given the total cost of the snacks to be purchased, reduce the cash on hand by that amount
 
 ### MPV
@@ -144,24 +148,24 @@ Total Cost: $55.00
 
 ## Instructions
 
-* [ ] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
+* [x] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
 
 ### The Objects Needed
 
 Create the classes mentioned above and then instantiate these objects from those classes
 
-* [ ] Snack
-* [ ] VendingMachine
-* [ ] Customer
+* [x] Snack
+* [x] VendingMachine
+* [x] Customer
 
-* [ ] Instantiate 2 customers
-  * [ ] Jane with $45.25
-  * [ ] Bob with $33.14
+* [x] Instantiate 2 customers
+  * [x] Jane with $45.25
+  * [x] Bob with $33.14
 
-* [ ] Instantiate 3 Vending Machines
-  * [ ] Food
-  * [ ] Drink
-  * [ ] Office
+* [x] Instantiate 3 Vending Machines
+  * [x] Food
+  * [x] Drink
+  * [x] Office
 
 * [ ] Instantiate 5 snacks
   * [ ] In Vending Machine Food
