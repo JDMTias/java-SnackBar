@@ -12,9 +12,11 @@ public class Main {
         Vmachine v2 = new Vmachine("Drink");
         Vmachine v3 = new Vmachine("Office");
 
-        // Snack(String name, int qty, double cost, String vmId)
-
         Snack s1 = new Snack("Chips", 36, 1.75, v1.getMachinename() );
+        Snack s2 = new Snack("Chocolate Bar", 36, 1.00, v1.getMachinename() );
+        Snack s3 = new Snack("Prestzel", 30, 2.00, v1.getMachinename() );
+        Snack s4 = new Snack("Soda", 24, 2.50, v2.getMachinename() );
+        Snack s5 = new Snack("Water", 20, 2.75, v2.getMachinename() );
 
         System.out.println(c1.getCustName() + " " + "has $" + c1.getCashOh());
         System.out.println(c2.getCustName() + " " + "has $" + c2.getCashOh());
@@ -23,7 +25,48 @@ public class Main {
         System.out.println(v2.getMachinename());
         System.out.println(v3.getMachinename());
 
-        System.out.println(s1.getQty() + s1.getName() + " " + "at" + " " + s1.getVmId() );
+        System.out.format("%s %s at %s for %s\n", s1.getQty(), s1.getName(),s1.getVmId(), s1.getCost());
+
+        System.out.format("%s %s at %s for %s\n", s2.getQty(), s2.getName(),s2.getVmId(), s2.getCost());
+
+        System.out.format("%s %s at %s for %s\n", s3.getQty(), s3.getName(),s3.getVmId(), s3.getCost());
+
+        System.out.format("%s %s at %s for %s\n", s4.getQty(), s4.getName(),s4.getVmId(), s4.getCost());
+
+        System.out.format("%s %s at %s for %s\n", s5.getQty(), s5.getName(),s5.getVmId(), s5.getCost());
+
+        c1.purchase(s4, 3);
+        
+        System.out.format("%s has $%s left, %s %s left\n", c1.getCustName(), c1.getCashOh() , s4.getQty(), s4.getName());
+
+        c1.purchase(s3, 1);
+
+        System.out.format("%s has $%s left, %s %s left\n", c1.getCustName(), c1.getCashOh() , s3.getQty(), s3.getName());
+
+        c2.purchase(s4, 2);
+
+        System.out.format("%s has $%s left, %s %s left\n", c2.getCustName(), c2.getCashOh() , s4.getQty(), s4.getName());
+
+        c1.setCashOh(c1.getCashOh() + 10);
+
+        System.out.println(c1.getCashOh());
+
+        c1.purchase(s2, 1); 
+
+        System.out.format("%s has $%s left, %s %s left\n", c1.getCustName(), c1.getCashOh() , s2.getQty(), s2.getName());
+
+        s3.setQty(s3.getQty() + 12);
+
+        System.out.println(s3.getQty());
+
+        c2.purchase(s3, 3);
+
+        System.out.format("%s has $%s left, %s %s left\n", c2.getCustName(), c2.getCashOh() , s3.getQty(), s3.getName());
+
+
+        
+     
+
 
 
 
@@ -38,20 +81,6 @@ public class Main {
 
 }
 
-
-// * [ ] Instantiate 3 Vending Machines
-// * [ ] Food
-// * [ ] Drink
-// * [ ] Office
-
-// * [ ] Instantiate 5 snacks
-// * [ ] In Vending Machine Food
-// * [ ] 36 Chips at $1.75
-// * [ ] 36 Chocolate Bar at $1.00
-// * [ ] 30 Pretzel at $2.00
-// * [ ] In Vending Machine Drink
-// * [ ] 24 Soda at $2.50
-// * [ ] 20 Water at $2.75
 
 // * [ ] Customer 1 (Jane) buys 3 of snack 4 (Soda).
 // * [ ] Print Customer 1 (Jane) Cash on hand.

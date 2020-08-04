@@ -10,6 +10,7 @@ public class Snack {
     private int qty;
     private double cost;
     private String vmId;
+    
 
     // constructor
 
@@ -64,6 +65,9 @@ public class Snack {
         this.vmId = vmId;
     }
 
+    public void buySnack(int amount) {
+        this.qty = this.qty - amount;
+    }
 
 
 

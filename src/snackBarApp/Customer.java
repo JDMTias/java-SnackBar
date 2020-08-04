@@ -41,6 +41,13 @@ public class Customer {
         this.cashOh = cashOh;
     }
 
+    public void purchase(Snack snack, int qty) {
+        snack.buySnack(qty);
+        double cost = snack.getCost();
+        this.cashOh -= cost*qty;
+
+    }
+
     
 }
 
