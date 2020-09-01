@@ -33,5 +33,9 @@ public class Customer {
         this.availCash = availCash;
     }
 
-
+    public void checkout(Snack snack, int qty) {
+        snack.buySnack(qty);
+        double cost = snack.getCost();
+        this.availCash -= cost * qty;
+    }
 }

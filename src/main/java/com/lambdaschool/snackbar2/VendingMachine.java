@@ -14,7 +14,7 @@ public class VendingMachine {
     public static int getMaxId() {
         return maxId;
     }
-    
+
 
     public int getVmId() {
         return vmId;
